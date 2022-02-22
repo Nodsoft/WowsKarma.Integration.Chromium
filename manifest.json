@@ -6,11 +6,6 @@
     "permissions": [
         "activeTab"
     ],
-    "action": {
-        "default_icon" : {
-            
-        }
-    },
     "content_scripts": [
         {
             "matches": ["https://wows-numbers.com/player/*"],
