@@ -1,0 +1,6 @@
+{
+    "name": "WowsKarma.Integration.Chromium",
+    "description": "Chrome extension for WOWS Karma integration",
+    "version": "0.1",
+    "manifest_version": 3
+}
