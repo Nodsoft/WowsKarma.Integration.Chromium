@@ -1,0 +1,26 @@
+{
+    "name": "WOWS Karma for Chromium",
+    "description": "Chromium extension for WOWS Karma integration",
+    "version": "1.0",
+    "author": "Scorpionfly31",
+    "manifest_version": 3,
+
+    "permissions": [
+        "activeTab"
+    ],
+
+    "icons": {
+        "128": "media/logo-128.png"  
+    },
+
+    "content_scripts": [
+        {
+            "matches": [
+                "https://wows-numbers.com/player/*", 
+                "https://*.wows-numbers.com/player/*"
+            ],
+
+            "js": ["content-script.js"]
+        }
+    ]
+}
