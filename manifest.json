@@ -5,10 +5,6 @@
     "author": "Scorpionfly31",
     "manifest_version": 3,
 
-    "permissions": [
-        "activeTab"
-    ],
-
     "icons": {
         "128": "media/logo-128.png"  
     },
