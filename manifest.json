@@ -13,7 +13,8 @@
         {
             "matches": [
                 "https://wows-numbers.com/player/*", 
-                "https://*.wows-numbers.com/player/*"
+                "https://*.wows-numbers.com/player/*",
+                "https://worldofwarships.eu/en/community/accounts/**"
             ],
 
             "js": ["content-script.js"]

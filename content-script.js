@@ -20,7 +20,6 @@ const tooltipTitle = "Open WOWS Karma Profile";
 
 let a = document.createElement("a");
 a.target = "_blank";
-a.href = window.location.href.replace("numbers", "karma");
 a.title = tooltipTitle;
 
 let img = document.createElement("img");
@@ -28,7 +27,15 @@ img.src = "https://wows-karma.com/assets/media/icons/android-chrome-192x192.png"
 img.alt = tooltipTitle;
 img.style = "height: 1.17em; margin-left: 0.5em;"
 
+
 a.appendChild(img);
-document.querySelector("body > div.container.main-container > div:nth-child(4) > div > h3").appendChild(a);
+
+if (window.location.href.includes("numbers")) {
+  a.href = window.location.href.replace("numbers", "karma");
+  document.querySelector("body > div.container.main-container > div:nth-child(4) > div > h3").appendChild(a);
+} else if (window.location.href.includes("https://worldofwarships.")) {
+  a.href = "https://wows-karma.com/player/" + window.location.href.slice(window.location.href.indexOf("accounts/") + 9, window.location.href.indexOf("accounts/") + 18) + ",e";
+  document.querySelector("#main-content > div.container.main-content__container > div > div.row.justify-content-between > div.col-lg-5.mt-4.mt-lg-0 > div > table > tr > td.account-profile__information > span").appendChild(a); 
+}
 
 console.debug("Appended WOWS Karma link.");
